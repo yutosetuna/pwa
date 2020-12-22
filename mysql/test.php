@@ -2,8 +2,8 @@
 <html>
 <body>
 <?php
-echo $_post["name"];
-echo $_post["from"];
+echo $_POST["name"];
+echo $_POST["from"];
 ?>
 </form>
 </body>
