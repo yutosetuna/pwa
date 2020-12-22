@@ -2,10 +2,10 @@
 <html>
 <body>
 <?php
-echo $_POST["name"]."さん";<br>
-echo $_POST["from"];
-echo $_POST["sex"];
-echo $_POST["color"];
+echo $_POST["name"]."さんの出身は";
+echo $_POST["from"]."で";
+echo $_POST["sex"]."です。";
+ echo $_POST["color"];
 ?>
 </form>
 </body>
