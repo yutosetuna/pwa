@@ -1,20 +1,4 @@
-<html>
-<head>
-     <title>心理テスト（仮）</title>
-</head>
-<body>
-  <h1>ホームページ</h1>
-  <p>うひょーーーーーーーー<p/>
-     <form action="https://sandbox.digiroid.org/" method="post">
-<P>
-学籍番号: <input type="text" name="number" size="20">
-<p>
-名前：<input type="text" name="name" size="20">
-</p>
-<p>
-性別：<input type="radio" name="sex" value="male">男
-<input type="radio" name="sex" value="female">女
-</p>
+
 <p>
      学年：<select name="grade">
 <option value="1">1回生</option>
