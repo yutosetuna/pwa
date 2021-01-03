@@ -52,7 +52,7 @@ $gakusei = $data->fetchAll();
             </li>
         <?php endforeach; ?>
         </ul>
-        <form action="situmonn.php" method="POST">
+        <form action="situmon.php" method="POST">
         <p>タイトル
 　　　　<input type="search" name="タイトル" value=""><br>
         </p>
