@@ -23,14 +23,14 @@ $gakusei = $data->fetchAll();
 
 $pdo = get_pdo();
 if (
-    isset($_POST['質問1'])
+    isset($_POST["質問文"])
 
 ) {
     $statement = $pdo->prepare(
         "INSERT INTO 質問一覧 (質問文) VALUES (:question1), (:question2), (:question3), (:question4);"
     );
     $statement->execute([
-        ':question1' => $_POST['質問1'],
+        ':question1' => $_POST["質問文"],
         ':question2' => $_POST['質問2'],
         ':question3' => $_POST['質問3'],
         ':question4' => $_POST['質問4'],
