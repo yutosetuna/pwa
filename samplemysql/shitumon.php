@@ -13,31 +13,44 @@ if (
     );
     $statement->execute([
         ':title' => $_POST['タイトル'],
-        
     ]);
 }
 
-$data = $pdo->prepare('SELECT * FROM アンケート一覧');
-$data->execute();
-$gakusei = $data->fetchAll();
-
-$pdo = get_pdo();
 if (
-    isset($_POST["質問文"])
-
+    isset($_POST["質問1"])
 ) {
-    $statement = $pdo->prepare(
-        "INSERT INTO situmonnichirann(質問文) VALUES (:question1), (:question2), (:question3), (:question4);"
+  // アンケート一覧に挿入したレコードのIDを取得
+  $statement = $pdo->query('SELECT LAST_INSERT_ID() AS ID FROM アンケート一覧 LIMIT 1;');
+  $enquete_id = $statement->fetch()['ID'];
+  var_dump($enquete_id);
+
+  $statement = $pdo->prepare(
+    "INSERT INTO situmonnichirann (質問文, アンケートID)
+    VALUES
+    (:question1, :enquete1),
+    (:question2, :enquete2),
+    (:question3, :enquete3),
+    (:question4, :enquete4);"
     );
     $statement->execute([
-        ':question1' => $_POST["質問文"],
+        ':question1' => $_POST["質問1"],
         ':question2' => $_POST['質問2'],
         ':question3' => $_POST['質問3'],
         ':question4' => $_POST['質問4'],
+        ':enquete1' => $enquete_id,
+        ':enquete2' => $enquete_id,
+        ':enquete3' => $enquete_id,
+        ':enquete4' => $enquete_id,
     ]);
 }
 
-$data = $pdo->prepare('SELECT * FROM situmonnichirann');
+$data = $pdo->prepare(
+  'SELECT *
+  FROM situmonnichirann
+  INNER JOIN アンケート一覧
+  ON situmonnichirann.アンケートID = アンケート一覧.ID
+'
+);
 $data->execute();
 $gakusei = $data->fetchAll();
 
