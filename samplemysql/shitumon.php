@@ -37,7 +37,7 @@ if (
     ]);
 }
 
-$data = $pdo->prepare('SELECT * FROM 質問一覧');
+$data = $pdo->prepare('SELECT * FROM situmonnichirann');
 $data->execute();
 $gakusei = $data->fetchAll();
 
