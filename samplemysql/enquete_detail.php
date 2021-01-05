@@ -17,13 +17,12 @@ $enquete_data = $statement->fetchAll();
 <body>
     <ul>
         <?php foreach ($enquete_data as $row): ?>
-            <li>
-            <h1>あなたの解答ページ</h1>    
+            <li>   
             質問ID: <?php echo htmlspecialchars($row['ID']); ?>
                 <?php echo nl2br(htmlspecialchars($row['質問文'])); ?>
-                <input type="text" name="answer1" size=40 >
             </li>
         <?php endforeach; ?>
+        <input type="text" name="answer" size="40" >
     </ul>
 </body>
 </html>
