@@ -22,7 +22,6 @@ $enquete_data = $statement->fetchAll();
                 <?php echo nl2br(htmlspecialchars($row['質問文'])); ?>
             </li>
         <?php endforeach; ?>
-        <input type="text" name="answer" size="40" >
     </ul>
 </body>
 </html>
