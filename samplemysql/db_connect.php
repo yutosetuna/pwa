@@ -25,4 +25,3 @@ function get_pdo() {
         var_dump($e);
     }
 }
-
