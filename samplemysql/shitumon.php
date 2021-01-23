@@ -78,11 +78,11 @@ $gakusei = $data->fetchAll();
         </p>
         <p>
           質問3
-            <input type="search" name="質問3" value=""><br>
+            <textarea name="質問3" ></textarea><br>
         </p>
         <p>
           質問4
-            <input type="search" name="質問4" value="">
+            <textarea name="質問4" ></textarea>
         </p>
             <input type="submit" name="submit" value="追加">
         </form>
