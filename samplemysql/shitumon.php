@@ -74,7 +74,7 @@ $gakusei = $data->fetchAll();
         </p>
         <p>
           質問2
-            <input type="search" name="質問2" value=""><br>
+            <textarea name="質問2" ></textarea><br>
         </p>
         <p>
           質問3
