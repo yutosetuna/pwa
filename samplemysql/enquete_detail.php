@@ -19,7 +19,7 @@ $enquete_data = $statement->fetchAll();
 <body>
 <form action="enquete_post.php" method="post">
     <p>
-        <label for="username">解答者の名前</label>
+        <label for="username">回答者の名前</label>
         <input type="text" name="username">
     </p>
     <ul>
